@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://cnbjxskyam84i"]
+[gd_scene load_steps=2 format=3 uid="uid://cnbjxskyam84i"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_oftom"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_oftom")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 145.0
+offset_top = 100.0
+offset_right = 945.0
+offset_bottom = 250.0
+tooltip_text = "Start a game"
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 145.0
+offset_top = 350.0
+offset_right = 945.0
+offset_bottom = 500.0
+tooltip_text = "Leave the game"
+text = "Quit"
+
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
