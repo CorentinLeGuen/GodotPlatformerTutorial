@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnbjxskyam84i"]
+[gd_scene load_steps=3 format=3 uid="uid://cnbjxskyam84i"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_oftom"]
+[ext_resource type="PackedScene" uid="uid://b8qcpehokdvxr" path="res://background.tscn" id="2_edubx"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_oftom")
@@ -20,6 +21,8 @@ offset_right = 945.0
 offset_bottom = 500.0
 tooltip_text = "Leave the game"
 text = "Quit"
+
+[node name="Background" parent="." instance=ExtResource("2_edubx")]
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
